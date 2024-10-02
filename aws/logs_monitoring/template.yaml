@@ -661,6 +661,7 @@ Resources:
         - !Sub "logs.${AWS::Region}.amazonaws.com.cn"
         - !Sub "logs.${AWS::Region}.amazonaws.com"
       SourceAccount: !Ref "AWS::AccountId"
+      SourceArn: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*:*"
   S3Permission:
     Type: AWS::Lambda::Permission
     Properties:
